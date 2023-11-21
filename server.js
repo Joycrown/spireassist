@@ -4,10 +4,11 @@ const cors = require('cors'); // Add this line to include the 'cors' module
 const app = express();
 
 const secret_key = "sk_test_51O9nO6DzfAzbhczjJI27Vix4L5AFMBQDTEd7thTsS46FhRHpnY5IOjRxhu4pPkDEIcV1UAqWy7KrStPVewduqjZg00rICMT23A"
-// const url = "https://spireassist.com"
 const url = "http://127.0.0.1:5500"
 const stripe = require('stripe')(secret_key);
 
+
+app.use(express.static(path.join(__dirname, 'public')));
 // Enable CORS for all routes
 app.use(cors());
 
