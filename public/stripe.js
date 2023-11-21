@@ -23,9 +23,9 @@ $(document).ready(function () {
       alert('Please select an amount');
       return;
     }
-   const url = "https://spireassist.vercel.app/"
+   const url = "https://spireassist.vercel.app/api/server"
     // Create a Checkout Session
-    fetch('https://spireassist.vercel.app/create-checkout-session', {
+    fetch('https://spireassist.vercel.app/api/server', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
